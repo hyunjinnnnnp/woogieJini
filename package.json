@@ -4,8 +4,15 @@
   "description": "",
   "main": "example.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.12.17",
+    "@babel/node": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.11.17"
+  }
 }
