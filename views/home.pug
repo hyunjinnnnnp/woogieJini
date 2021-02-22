@@ -6,5 +6,12 @@ html(lang="en")
         link(rel="stylesheet", href="/styles/styles.css")
         title #{pageTitle}
     body
+        include ./imageBlock.pug
         h1 HI
+        .img-container
+            each src in array
+                li
+                    img(src=src, alt="")
+
+                
         script(src="/js/main.js")

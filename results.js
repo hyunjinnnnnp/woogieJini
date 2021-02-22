@@ -1,15 +1,13 @@
 import Image from "./models/Image";
 
-const getResults = async (dataObj) => {
+export const getResults = async (dataObj) => {
   try {
     const newImage = await Image.create({
       amount: dataObj.amount,
       imgList: dataObj.imgList,
     });
-    console.log(`result : ${newImage}`);
+    console.log(newImage);
   } catch (error) {
     console.log(error);
   }
 };
-
-export default getResults;
