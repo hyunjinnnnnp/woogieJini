@@ -15,6 +15,7 @@
     "@babel/node": "^7.12.17",
     "@babel/preset-env": "^7.12.17",
     "babelify": "^10.0.0",
+    "body-parser": "^1.19.0",
     "del": "^6.0.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.20.0",

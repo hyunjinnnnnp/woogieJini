@@ -1,10 +1,11 @@
 import Image from "./models/Image";
+import "./db";
 
-export const getResults = async (dataObj) => {
+export const getResults = async (storedItems) => {
   try {
     const newImage = await Image.create({
-      amount: dataObj.amount,
-      imgList: dataObj.imgList,
+      amount: storedItems.length,
+      imgSrc: storedItems,
     });
     console.log(newImage);
   } catch (error) {
