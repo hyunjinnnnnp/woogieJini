@@ -23,13 +23,9 @@ app.use(logger("dev"));
 app.use(express.static(join(__dirname, "static")));
 
 const handleHome = async (req, res) => {
-  const id = "60363acef9066826ffb5211e";
   try {
-    const dataObj = await Image.findOne({
-      _id: id,
-    });
-    const sources = dataObj.imgSrc;
-    // console.log(dataObj.imgSrc);
+    const image = await Image.findOne({});
+    const sources = image.imgSrc;
     res.render("home", { pageTitle: "BlaBLA", sources });
   } catch (error) {
     console.log(error);

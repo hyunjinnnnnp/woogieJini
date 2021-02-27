@@ -1,9 +1,9 @@
 import puppeteer from "puppeteer";
 
 const wsChromeEndpointurl =
-  "ws://127.0.0.1:9222/devtools/browser/a719293d-0995-4220-bed7-a2ccf2a1a037";
+  "ws://127.0.0.1:9222/devtools/browser/b1d78387-62b6-41d7-8dc1-950c43c2a477";
 
-function extractItems() {
+const extractItems = () => {
   const items = [];
   try {
     const extractedElements = document.querySelectorAll(".album img");
@@ -12,13 +12,12 @@ function extractItems() {
     console.log(e);
   }
   return items;
-}
-
-async function scrapInfiniteScrollItems(
+};
+const scrapInfiniteScrollItems = async (
   page,
   extractItems,
   scrollDelay = 1000
-) {
+) => {
   let items = [];
   let storedItems = [];
   try {
@@ -46,9 +45,9 @@ async function scrapInfiniteScrollItems(
     // eslint-disable-next-line no-empty
   } catch (error) {}
   return storedItems;
-}
+};
 
-const webScraper = async (pageUrl) => {
+export const webScraper = async (pageUrl) => {
   try {
     const browser = await puppeteer.connect({
       browserWSEndpoint: wsChromeEndpointurl,
@@ -70,5 +69,3 @@ const webScraper = async (pageUrl) => {
     console.log(e);
   }
 };
-
-export { webScraper };
