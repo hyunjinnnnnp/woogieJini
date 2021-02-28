@@ -1,5 +1,5 @@
-@import "reset.scss";
-@import "variables.scss";
+@import "reset";
+@import "variables";
 
 * {
   margin: 0;
@@ -9,5 +9,21 @@
 
 html,
 body {
-  height: 100vh;
+  height: 100%;
+  background-color: $black;
+}
+main {
+  border: 1px solid red;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-container {
+  border: 2px dashed yellow;
+  height: 50%;
+  overflow: scroll;
+}
+img {
+  min-width: 100px;
 }

@@ -29,7 +29,7 @@ const handleHome = async (req, res) => {
     res.render("home", { pageTitle: "BlaBLA", sources });
   } catch (error) {
     console.log(error);
-    res.render("home", { pageTitle: "failed", imgObj: [] });
+    res.render("home", { pageTitle: "failed", sources: [] });
   }
 };
 
